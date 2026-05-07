@@ -188,27 +188,54 @@ section {
 
 /* PROJECTS */
 .projects-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
-  gap:20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .project-card {
-  background:var(--surface);
-  border:1px solid var(--border);
-  padding:25px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 16px;
+  transition: 0.3s ease;
+  backdrop-filter: blur(10px);
 }
 
 .project-card:hover {
-  border-color:var(--accent);
-  transform:translateY(-5px);
-  transition:0.3s;
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 0 25px rgba(56,189,248,0.2);
+}
+
+.project-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+.project-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 .project-link {
-  color:var(--accent);
-  font-size:12px;
-  letter-spacing:2px;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.project-link:hover {
+  background: var(--accent);
+  color: #000;
 }
 
 /* CONTACT */
