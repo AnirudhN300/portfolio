@@ -156,32 +156,43 @@ section {
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 15px;
 }
+
 .skill-card {
-  background:var(--surface);
-  padding:20px;
-  font-size:14px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  padding: 14px 22px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
 }
 
-/* ADD BELOW */
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(56,189,248,0.25);
+}
+
 .skill-card i {
   font-size: 22px;
-  margin-right: 10px;
   color: var(--accent);
 }
 
+/* REMOVE OLD SKILL BARS */
 .skill-bar {
-  height:2px;
-  background:var(--border);
-  margin-top:8px;
+  display: none;
 }
 
 .skill-fill {
-  height:100%;
-  background:var(--accent);
+  display: none;
 }
 
 /* PROJECTS */
