@@ -21,23 +21,14 @@
 body {
   margin: 0;
   font-family: 'DM Sans', sans-serif;
-  background: linear-gradient(-45deg, #0f172a, #111827, #1e293b, #312e81);
-  background-size: 400% 400%;
-  animation: gradientBG 12s ease infinite;
-  color: var(--text);
-}
+  background:
+    linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+    url('./images/background.jpg');
 
-/* Animated Background */
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text);
 }
 
 /* NAV */
