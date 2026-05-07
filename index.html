@@ -19,10 +19,25 @@
   --muted:#94a3b8;
 }
 body {
-  margin:0;
-  font-family:'DM Sans',sans-serif;
-  background:var(--bg);
-  color:var(--text);
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: linear-gradient(-45deg, #0f172a, #111827, #1e293b, #312e81);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  color: var(--text);
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* NAV */
